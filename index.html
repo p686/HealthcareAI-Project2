@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <style>
+      body{
+        
+      }
+      .header {
+        background-color:#08253b;
+        width:100%;
+        height:120px;
+        position:absolute;
+        top:0;
+        left:0;
+      }
+    
+      .input {
+        background: none; 
+        font-family: courier;
+        font-size: 1.1em;
+        padding: 2px;
+        border-radius: 10px;
+        border: 1px solid black; 
+        }
+        
+      form {
+        display: inline-block;
+        background-color: #F7F6F6;
+        //background-color:white;
+        margin: 0 auto;
+        border: 3px solid darkgrey;
+        border-radius: 15px;
+        font-size: 15px;
+        padding-left: 2%;
+        padding-right: 2%;
+        padding-bottom: 2%;
+        }
+
+      .container{
+        text-align: center;
+        left-margin: auto;
+        right-margin: auto;
+        margin-top: 130px;
+        }
+
+      input[type=radio],
+      input.radio {
+        //float: left;
+        clear: none;
+        //margin: 2px 0 0 2px;
+        display: inline;
+        margin-bottom: 0px;
+        }
+
+      .textbox{
+        text-align: left;
+        }
+      .radiobox{
+        //float: left; 
+        //clear: none;
+        text-align:center;
+        }
+
+
+     .r {
+        float: left;
+        display: inline;
+      
+        }
+
+    .r input {
+        vertical-align: left;
+        padding-left: 1%;
+        padding-right: 1%
+        }
+
+    </style>
+
+    <body>
+      <div class="header"> 
+        <img src="https://dudbm6bcnmy8e.cloudfront.net/cwru-drupal-assets/images/cwru-logo.svg";this.style.margin='-12px 0px';this.style.minHeight='55px'" alt="Case Western Reserve University" class="logo-default" title="Case Western Reserve University">
+      </div>
+
+    <div class="container">
+      <h3>Heart Disease Prediction Calculator</h3>
+      <p>Answer the following questions and click Submit to calculate your risk of developing heart disease.</p>
+
+    <div class="form">
+    <form method="post" action="/submit">
+      <div class="textbox">
+        <p><label><b>Age:</b> </label><input type="text" name="Age"></p>
+       </div>
+
+      <div class="radiobox">  
+        <legend style="display:inline;float:left"><b>Sex:</b></legend>
+        <label class="r">
+        <input type="radio" class="radio" id="sex1"
+           name="Sex" value="0" required>
+        Female</label>
+        <label class="r">
+        <input type="radio" id="sex2"
+           name="Sex" value="1" required>
+        Male</label>
+       </div>
+<br>
+<br>
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Chest Pain:</b></legend>
+         <label class="r">
+         <input type="radio" id="cp1"
+           name="Chest_Pain" value="0" required>
+        0: Typical Angina</label>
+        <label class="r">
+        <input type="radio" id="cp2"
+           name="Chest_Pain" value="1" required>
+        1: Atypical Angina</label>
+        <label class="r">
+        <input type="radio" id="cp3"
+           name="Chest_Pain" value="2" required>
+        2: Non-Anginal Pain</label>
+        <label class="r">
+        <input type="radio" id="cp4"
+           name="Chest_Pain" value="3" required>
+        3: Asymptomatic</label>
+      </div>
+
+        <br>
+
+      <div class="textbox">  
+        <p><label><b>Resting BP (in mm Hg on admission to the hospital):</b> </label><input type="text" name="Resting_BP" required></p>
+      </div>
+
+      <div class="textbox">
+        <p><label><b>Serum Cholesterol (mg/dl):</b></label><input type="text" name="Serum_Cholesterol" required></p>
+      </div>
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Fasting Blood Sugar > 120 mg/dl:</b></legend>
+        <label class="r">
+        <input type="radio" id="fbs1"
+           name="Fasting_Blood_Sugar_>_120_mg/dl" value="1" required>
+        True</label>
+        <label class="r">
+        <input type="radio" id="fbs2"
+           name="Fasting_Blood_Sugar_>_120_mg/dl" value="0" required>
+        False</label>
+      </div>
+
+        <br>
+        <br>
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Resting ECG</b></legend>
+        <label class="r">
+        <input type="radio" id="restecg1"
+           name="Resting_ECG" value="0" required>
+        0: Normal</label>
+        <label class="r">
+        <input type="radio" id="restecg2"
+           name="Resting_ECG" value="1" required>
+        1: Having ST-T wave abnormality</label>
+        <label class="r">
+        <input type="radio" id="restecg3"
+           name="Resting_ECG" value="2" required>
+        2: Showing probable or definite left ventricular hypertrophy</label>
+      </div>
+
+        <br>
+    
+
+      <div class="textbox">
+        <p><label><b>Thalach: maximum heart rate achieved:</b> </label><input type="text" name="Thalach" required></p>
+      </div>
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Exercise Induced Angina:</b></legend>
+        <label class="r">
+        <input type="radio" id="exang1"
+          name="Exercise_Induced_Angina" value="1" required>
+        Yes</label>
+        <label class="r">
+        <input type="radio" id="exang2"
+          name="Exercise_Induced_Angina" value="0" required>
+        No</label>
+      </div>
+
+        <br>
+
+
+      <div class="textbox">
+        <p><label><b>ST depression induced by exercise relative to rest:</b> </label> <input type="text" name="Exercise-induced_ST_depression" required></p>
+      </div>
+
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Slope</b></legend>
+        <label class="r">
+        <input type="radio" id="slope1"
+          name="Slope" value="0" required>
+        0: Sloping</label>
+        <label class="r">
+        <input type="radio" id="slope2"
+          name="Slope" value="1" required>
+        1: Flat</label>
+        <label class="r">
+        <input type="radio" id="slope3"
+          name="Slope" value="2" required>
+        2: Downsloping</label>
+      </div>
+
+        <br>
+        <br>
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Number of major vessels colored by flourosopy:</b></legend>
+        <label class="r">
+        <input type="radio" id="ca1"
+           name="Number_of_major_Blood_Vessels" value="0" required>
+        0</label>
+        <label class="r">
+        <input type="radio" id="ca2"
+           name="Number_of_major_Blood_Vessels" value="1" required>
+        1</label>
+        <label class="r">
+        <input type="radio" id="ca3"
+           name="Number_of_major_Blood_Vessels" value="2" required>
+        2</label>
+        <label class="r">
+        <input type="radio" id="ca4"
+           name="Number_of_major_Blood_Vessels" value="3" required>
+        3</label>
+      </div>
+
+        <br>
+        <br>
+
+      <div class="radiobox">
+        <legend style="display:inline;float:left"><b>Thal:</b></legend>
+        <label class="r">
+        <input type="radio" id="thal1"
+           name="Thal" value="1" required>
+        1</label>
+        <label class="r">
+        <input type="radio" id="thal2"
+           name="Thal" value="2" required>
+        2</label>
+        <label class="r">
+        <input type="radio" id="thal3"
+           name="Thal" value="3" required>
+        3</label>
+        </div>
+
+        <br>
+        <br>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+    
+        </form>
+        </div>
+        <div>
+            <p><b>Your likelihood of developing heart disease is: {{result}}</b></p>
+            <br>
+        </div>
+        </div>
+    </body>
+    </html>
